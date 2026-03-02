@@ -24,4 +24,21 @@ public class Biblioteca {
         return libroEncontrado;
     }
 
+    //@Contract(pure = true)
+    private int buscarPrimerHuecoLibre(){
+        int posicionLibre = 0;
+        boolean seguirBuscando = true;
+
+        for(int i = 0; i < CANT_MAX_LIBRROS; i++){
+            if(catalogo[i] != null){
+                posicionLibre = i;
+                seguirBuscando = false;
+            }
+        }
+
+        return posicionLibre;
+    }
+
+
+
 }
