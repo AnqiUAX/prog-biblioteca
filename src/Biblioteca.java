@@ -39,6 +39,18 @@ public class Biblioteca {
         return posicionLibre;
     }
 
+    public boolean addlibro(Libro libro){
+        boolean libroAnadido = false;
+        int posicion;
 
+        if( findlibro(libro.getId()) == null){
+            posicion = buscarPrimerHuecoLibre();
+            if( posicion >= 0 ){
+                catalogo[posicion] = libro;
+                libroAnadido = true;
+            }
+        }
+        return libroAnadido;
+    }
 
 }
