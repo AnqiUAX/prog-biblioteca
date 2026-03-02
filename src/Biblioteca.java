@@ -68,4 +68,19 @@ public class Biblioteca {
         return libroEncontrado;
     }
 
+    public boolean updateNumeroPaginas(int idLibro, int numPaginas){
+        boolean numPaginasActualizado = false;
+        Libro libro;
+
+        libro = findlibro(idLibro);
+
+        if( libro != null ){
+            numPaginasActualizado = libro.updateNumeroPaginas(numPaginas);
+        }
+
+        return numPaginasActualizado;
+    }
+
+
+
 }
