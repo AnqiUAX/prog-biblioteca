@@ -53,4 +53,19 @@ public class Biblioteca {
         return libroAnadido;
     }
 
+    public Libro deletelibro(int id){
+        Libro libroEncontrado = null;
+        int posicion;
+        boolean seguirBuscando = true;
+
+        for(int i  = 0; i < CANT_MAX_LIBRROS && seguirBuscando; i++){
+            if(catalogo[i] != null && catalogo[i].getId() == id){
+                libroEncontrado = catalogo[i];  //guardo libro
+                catalogo[i] = null;             //vaciamos la posicion
+                seguirBuscando = false;         //para que no siga recorriendo
+            }
+        }
+        return libroEncontrado;
+    }
+
 }
