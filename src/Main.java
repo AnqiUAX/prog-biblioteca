@@ -1,14 +1,18 @@
-public class Main{
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        Biblioteca biblioteca = new Biblioteca( 10);
 
-    public static void main(String[] args){
+        Libro libro1 = new Libro(1, "El Quijote", "Miguel de Cervantes", 678);
+        Libro libro2 = new Libro(2, "El gato con botas", " Charles Perrault", 100);
 
-        Libro libro1 = new Libro(1, "el quojote", "Migel de Cervantes",678);
+        System.out.println(biblioteca.findLibro(1) ) ;  // null
 
-        Libro libro2 = new Libro(2,"el gato con botas","Charles perrault",100);
-
-        System.out.println(biblioteca.addlibro(libro1));
-        System.out.println(biblioteca.addlibro(libro2));
+        System.out.println(biblioteca.addLibro(libro1)); // true
+        System.out.println(biblioteca.addLibro(libro2)); // true
 
         System.out.println(biblioteca.obtainCatalogo());
+
     }
 }
